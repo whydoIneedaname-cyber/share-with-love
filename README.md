@@ -28,7 +28,6 @@
 - 本仓库中的笔记与分析为个人整理与创作
 - 部分内容由 AI 辅助整理，仅供学习参考，如有错误欢迎指正
 - 部分内容源自网络，仅供学习交流；如涉及侵权，请联系删除
-- PDF、音频等材料若涉及第三方版权，开源前请确认已取得相应授权
 
 ## 许可证
 
@@ -74,7 +73,6 @@ This repository contains materials produced during my personal study:
 - The notes and analyses are personally compiled and authored
 - Some content is AI-assisted and provided for study reference only; please point out any errors
 - Some content is sourced from the internet for study and exchange only; if it infringes any rights, please contact us for removal
-- For PDFs and audio that may involve third-party copyright, please confirm proper authorization before open-sourcing
 
 ## License
 
