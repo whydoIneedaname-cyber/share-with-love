@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高中地理高频考点速记</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌏</text></svg>">
+<style>
+  :root{
+    --bg:#fafaf7;
+    --ink:#1f2937;
+    --ink-soft:#4b5563;
+    --line:#e5e7eb;
+    --red:#dc2626;
+    --red-bg:#fef2f2;
+    --blue:#1d4ed8;
+    --blue-bg:#eff6ff;
+    --green:#047857;
+    --green-bg:#ecfdf5;
+    --purple:#6d28d9;
+    --purple-bg:#f5f3ff;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* 顶部 */
+  .topbar{
+    position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
+  }
+  .topbar h1{font-size:16px;font-weight:700;letter-spacing:.5px}
+  .topbar .meta{font-size:12px;color:var(--ink-soft)}
+  /* 图例 */
+  .legend{
+    display:flex;flex-wrap:wrap;gap:8px;padding:10px 16px;background:#fff;
+    border-bottom:1px solid var(--line);font-size:12px;
+  }
+  .legend span{display:inline-flex;align-items:center;gap:4px}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .dot.r{background:var(--red)} .dot.b{background:var(--blue)}
+  .dot.g{background:var(--green)} .dot.p{background:var(--purple)}
+  /* 侧边导航（桌面） */
+  nav.toc{
+    position:fixed;left:0;top:0;bottom:0;width:200px;padding:80px 12px 20px;
+    overflow-y:auto;border-right:1px solid var(--line);background:#fff;display:none;
+  }
+  nav.toc a{
+    display:block;padding:6px 10px;font-size:13px;color:var(--ink-soft);
+    text-decoration:none;border-radius:6px;margin-bottom:2px;
+  }
+  nav.toc a:hover{background:#f3f4f6;color:var(--ink)}
+  main{max-width:780px;margin:0 auto;padding:16px}
+  @media(min-width:900px){
+    main{margin-left:220px;padding:24px 32px}
+    nav.toc{display:block}
+  }
+  /* 模块 */
+  .module{margin-bottom:28px}
+  .module-title{
+    font-size:18px;font-weight:700;padding:10px 14px;border-radius:8px;
+    background:#1f2937;color:#fff;margin-bottom:12px;
+  }
+  .module-title .num{opacity:.6;margin-right:8px;font-weight:400}
+  /* 考点卡片 */
+  .item{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    margin-bottom:10px;overflow:hidden;
+  }
+  .item-head{
+    padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:8px;
+    font-weight:600;font-size:14.5px;user-select:none;
+  }
+  .item-head:hover{background:#f9fafb}
+  .item-head .toggle{
+    margin-left:auto;font-size:12px;color:var(--ink-soft);font-weight:400;
+    transition:transform .2s;
+  }
+  .item.open .item-head .toggle{transform:rotate(90deg)}
+  .item-body{display:none;padding:0 14px 14px;border-top:1px dashed var(--line);padding-top:12px}
+  .item.open .item-body{display:block}
+  /* 标签 */
+  .tag{
+    display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:4px;
+    margin-right:6px;vertical-align:middle;
+  }
+  .tag.r{background:var(--red-bg);color:var(--red)}
+  .tag.b{background:var(--blue-bg);color:var(--blue)}
+  .tag.g{background:var(--green-bg);color:var(--green)}
+  .tag.p{background:var(--purple-bg);color:var(--purple)}
+  /* 内容块 */
+  .block{margin-bottom:10px;font-size:14px}
+  .block:last-child{margin-bottom:0}
+  .block h4{
+    font-size:13px;font-weight:700;margin-bottom:4px;color:var(--ink-soft);
+    text-transform:none;letter-spacing:0;
+  }
+  .key{color:var(--red);font-weight:600}
+  .tpl{color:var(--blue);font-weight:600}
+  .tip{color:var(--green);font-weight:600}
+  .warn{color:var(--purple);font-weight:600}
+  ul{padding-left:18px;margin:4px 0}
+  li{margin-bottom:3px}
+  .formula{
+    background:#f9fafb;border-left:3px solid var(--blue);padding:8px 12px;
+    border-radius:0 6px 6px 0;margin:6px 0;font-size:13.5px;
+  }
+  .口诀{
+    background:var(--green-bg);border-left:3px solid var(--green);padding:8px 12px;
+    border-radius:0 6px 6px 0;margin:6px 0;font-size:13.5px;
+  }
+  .注意{
+    background:var(--purple-bg);border-left:3px solid var(--purple);padding:8px 12px;
+    border-radius:0 6px 6px 0;margin:6px 0;font-size:13.5px;
+  }
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0}
+  th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  th{background:#f3f4f6;font-weight:600}
+  /* 折叠全部按钮 */
+  .toolbar{
+    position:fixed;right:16px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:8px;
+  }
+  .toolbar button{
+    width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+    background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.1);cursor:pointer;
+    font-size:11px;color:var(--ink-soft);
+  }
+  .toolbar button:active{background:#f3f4f6}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>高中地理 · 高频考点速记</h1>
+  <span class="meta">点击条目可折叠自测</span>
+</div>
+<div class="legend">
+  <span><i class="dot r"></i>必背得分点</span>
+  <span><i class="dot b"></i>答题模板</span>
+  <span><i class="dot g"></i>秒杀口诀</span>
+  <span><i class="dot p"></i>易错提醒</span>
+</div>
+
+<nav class="toc">
+  <a href="#m1">一、地理位置与地形</a>
+  <a href="#m2">二、地球运动与等值线</a>
+  <a href="#m3">三、气候要素分析</a>
+  <a href="#m4">四、天气系统与气象灾害</a>
+  <a href="#m5">五、海洋水体</a>
+  <a href="#m6">六、河流与水循环</a>
+  <a href="#m7">七、地质地貌</a>
+  <a href="#m8">八、自然带与地域分异</a>
+  <a href="#m9">九、人口与城市</a>
+  <a href="#m10">十、农业</a>
+  <a href="#m11">十一、工业与产业转移</a>
+  <a href="#m12">十二、交通与工程区位</a>
+  <a href="#m13">十三、资源开发与调配</a>
+  <a href="#m14">十四、可持续发展与环境问题</a>
+  <a href="#m15">十五、旅游地理</a>
+  <a href="#m16">十六、答题规范与3S技术</a>
+</nav>
+
+<main>
+
+<!-- ========== 模块一 ========== -->
+<section class="module" id="m1">
+  <div class="module-title"><span class="num">01</span>地理位置与地形特征描述</div>
+
+  <div class="item open">
+    <div class="item-head">1. 地理位置描述 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag b">模板</span>答题四要素</h4>
+        <ul>
+          <li><span class="key">半球位置</span>：东/西半球，南/北半球</li>
+          <li><span class="key">纬度位置</span>：低/中/高纬；热/温/寒带</li>
+          <li><span class="key">海陆位置</span>：某大洋某岸、某大陆某部</li>
+          <li><span class="key">相对位置</span>：位于XX方位，临/接/靠XX地区</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag g">口诀</span>地理位置评价六维度</h4>
+        <div class="口诀">经纬度（→气候→农业种类/熟制）｜海陆（→降水/海运/海洋资源）｜相邻（→商贸/国际协作）｜交通（→运费/腹地）｜经济（→引资/技术）｜政治（→行政中心）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">2. 地形特征描述 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag b">模板</span>四句话</h4>
+        <ul>
+          <li>地形类型<span class="key">多样/单一</span>，以XX、XX为主</li>
+          <li>地势起伏<span class="key">大/小</span>，地势<span class="key">XX高XX低</span></li>
+          <li>主要地形类型的分布</li>
+          <li>特殊地貌（海岸线曲折、喀斯特、沙漠、冰川、火山等——<span class="key">有必写</span>）</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">引申</span>地形对地理要素的影响</h4>
+        <div class="formula">地形 → 气候 + 河流 + 土壤 + 农业 + 工业 + 交通 + 城市</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">3. 自然地理特征总述 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">自然地理特征 = 地理位置 + 地形 + 气候 + 自然带 + 水文 + 资源 + 自然灾害</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块二 ========== -->
+<section class="module" id="m2">
+  <div class="module-title"><span class="num">02</span>地球运动与等值线判读</div>
+
+  <div class="item">
+    <div class="item-head">4. 等值线"五读法" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag g">口诀</span>五步秒杀选择题</h4>
+        <ul>
+          <li><span class="key">读图名</span>——明确等值线类型</li>
+          <li><span class="key">读数值</span>——注意"最大/最小"，特别注意<span class="warn">闭合等值线</span></li>
+          <li><span class="key">读疏密</span>——反映水平差距大小（坡度/温差/风力）</li>
+          <li><span class="key">读凸向</span>——"凸高为低、凸低为高"</li>
+          <li><span class="key">读延伸方向</span>——考查影响因素</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">5. 地方时与日界线计算 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">关键</span>地方时</h4>
+        <ul>
+          <li>第一步：从图文找到<span class="key">已知地方时</span>（解题关键）</li>
+          <li>第二步：东加西减；<span class="warn">航程题必须加航行时间</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag g">口诀</span>日界线两步</h4>
+        <div class="口诀">①画剖面图 → ②找0:00所在经线 → 即得新/旧一天范围</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">6. 地球公转季节判断 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">三夏一冬选冬，三冬一夏选夏，遇到春秋不选；或画万能图找点看移动方向</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">7. 航天发射基地区位 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag b">模板</span>六要素</h4>
+        <ul>
+          <li><span class="key">气象</span>：风速小、晴天多、透明度好</li>
+          <li><span class="key">地形地质</span>：平坦开阔、结构稳定</li>
+          <li><span class="key">人口</span>：人烟稀少，可建禁区</li>
+          <li><span class="key">纬度</span>：越低越好——线速度大、省燃料</li>
+          <li><span class="key">交通+国防</span></li>
+          <li><span class="key">夜间发射</span>利于跟踪观测</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块三 ========== -->
+<section class="module" id="m3">
+  <div class="module-title"><span class="num">03</span>气候要素分析</div>
+
+  <div class="item open">
+    <div class="item-head">8. 影响气温的因素 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">气温 = 纬度 + 海陆 + 地形 + 洋流 + 人类活动</div>
+      <ul>
+        <li>纬度高→气温低；纬度低→气温高</li>
+        <li>夏季陆&gt;海，冬季陆&lt;海</li>
+        <li>海拔高→气温低；迎风坡&lt;背风坡</li>
+        <li>同纬度暖流&gt;寒流</li>
+        <li>局部异常（等温线弯曲）→多为<span class="key">城市热岛</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">9. 昼夜温差 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">核心</span>下垫面比热容</h4>
+        <ul>
+          <li>比热容<span class="key">大</span>→升温降温慢→温差<span class="key">小</span></li>
+          <li>比热容<span class="key">小</span>→升温降温快→温差<span class="key">大</span></li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag g">标准论述</span>两大模板区域</h4>
+        <div class="口诀">
+        ①西北地区：深居内陆→温带大陆性气候→光照强、昼夜温差大→利于糖分积累<br>
+        ②青藏高原：海拔高→空气稀薄→白天削弱作用小（辐射强）、夜晚大气逆辐射弱（保温差）→温差大</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">10. 影响太阳辐射的因素 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">太阳辐射 = 纬度 + 地形 + 光照（天气）</div>
+      <ul>
+        <li>纬度低→辐射强</li>
+        <li>地势高、空气稀薄→削弱少</li>
+        <li>晴天多→日照时间长</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">11. 影响降水的因素 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">降水 = 大气环流 + 地形 + 下垫面 + 海陆位置 + 洋流 + 人类活动</div>
+      <ul>
+        <li><span class="key">大气环流</span>：单一气压带/风带，或气压带风带交替控制</li>
+        <li><span class="key">地形</span>：迎风坡多雨、背风坡少雨；海拔影响对流（如东非高原）</li>
+        <li><span class="key">下垫面</span>：植被/湿地增湿；冷空气遇水→降雪（日本西北、五大湖）</li>
+        <li><span class="key">海陆</span>：近海多、远海少（大区域）；局部看等降水量线</li>
+        <li><span class="key">洋流</span>：暖流增温增湿，寒流降温减湿</li>
+        <li><span class="key">人类</span>：人工降雨、城市雨岛</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">12. 气候特征描述 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">气候特征 = 气温特征 + 降水特征（+水热组合）</div>
+      <ul>
+        <li><span class="key">气温</span>：年均温高低 + 年较差 + 日较差</li>
+        <li><span class="key">降水</span>：年降水量 + 年际分配 + 季节分配</li>
+      </ul>
+      <div class="block" style="margin-top:8px">
+        <h4><span class="tag p">成因两模式</span></h4>
+        <ul>
+          <li>地带性：太阳辐射 + 大气环流</li>
+          <li>非地带性：地形 + 洋流（记三种特殊气候分布）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">13. 风向题四步 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ol style="padding-left:18px">
+        <li>读数值→作垂线→伸手判断</li>
+        <li>看纬线→画"七压六风"</li>
+        <li>定位东亚/南亚→判断季节→季风风向</li>
+        <li>有锋面→看符号凸向→画箭头</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块四 ========== -->
+<section class="module" id="m4">
+  <div class="module-title"><span class="num">04</span>天气系统与气象灾害</div>
+
+  <div class="item">
+    <div class="item-head">14. 全球气候变暖 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">原因</span></h4>
+        <ul>
+          <li>自然：太阳活动异常</li>
+          <li>人为：①燃烧矿物燃料→CO₂增多；②毁林→吸收CO₂减少</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">影响</span></h4>
+        <ul>
+          <li>海平面上升→淹没沿海低地</li>
+          <li>极端天气增多（旱涝、暴雨）</li>
+          <li>农业经济结构变化</li>
+          <li>物种灭绝、生态系统改变</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">措施</span></h4>
+        <div class="口诀">
+        减排（少用化石燃料/提能效/用新能源/控甲烷）<br>
+        增汇（植树造林/保护原始林/固碳技术）<br>
+        适应（培育良种/调农业结构/建海堤）<br>
+        国际合作
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">15. 主要气象灾害对比 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th>灾害</th><th>成因</th><th>防御</th></tr>
+        <tr><td>台风</td><td>热带气旋强烈发展</td><td>监测预报；沿海防护林</td></tr>
+        <tr><td>暴雨洪涝</td><td>连续/短时大暴雨</td><td>修堤坝/水库/分洪区；植树；预警系统</td></tr>
+        <tr><td>干旱</td><td>长时期无降水/异常偏少</td><td>水利建设；农林牧结合；耐旱作物</td></tr>
+        <tr><td>寒潮</td><td>强冷空气入侵剧烈降温</td><td>预报预警；提前防寒</td></tr>
+        <tr><td>滑坡</td><td>岩体/土体沿滑动面下滑</td><td>护坡工程；避开破碎地带</td></tr>
+        <tr><td>泥石流</td><td>山区含泥沙石块特殊洪流</td><td>植树造林；避让沟谷</td></tr>
+      </table>
+      <div class="注意"><span class="tag p">注意</span>灾情大小还与<span class="warn">人口密度、经济发展程度</span>正相关</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">16. 我国常见气象问题秒杀 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li><span class="key">长江中下游伏旱</span>（7-8月）：副高控制→酷热少雨</li>
+        <li><span class="key">华北春旱</span>（3-5月）：①气温回升快蒸发旺 ②雨带未到 ③春播用水大</li>
+        <li><span class="key">台风/飓风/风暴潮</span>：夏秋季节，热带洋面</li>
+      </ul>
+      <div class="block" style="margin-top:8px">
+        <h4><span class="tag g">洪涝成因三角度</span></h4>
+        <div class="口诀">
+        ①来水大：降水多/变率大、流域广/支流多、植被少<br>
+        ②排水不畅：地势低、河道弯、河道淤、占河道<br>
+        ③调蓄差：围湖造田、泥沙淤积
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">17. 防灾措施分类 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li><span class="key">非工程</span>：宣传教育、法规体系、监测预报、应急机制</li>
+        <li><span class="key">工程</span>：防洪堤、防护林、护坡工程等</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块五 ========== -->
+<section class="module" id="m5">
+  <div class="module-title"><span class="num">05</span>海洋水体</div>
+
+  <div class="item">
+    <div class="item-head">18. 海水温度"四高四低" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">
+      <span class="key">四高</span>：低纬高、夏季高、暖流高、表层高<br>
+      <span class="key">四低</span>：高纬低、冬季低、寒流低、深层低
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">19. 海水盐度"四看法" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">盐度 = 看纬度（蒸发vs降水）+ 看海拔（结冰/融冰）+ 看洋流（暖高寒低）+ 看河流（淡水稀释）</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">20. 渔场区位"四地一指向" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">
+      温带海区 + 浅海大陆架 + 洋流（寒暖流交汇/上升流）+ 河口处<br>
+      <span class="key">共同指向</span>：饵料丰富、营养盐类多
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">21. 盐场区位 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">盐场 = 含盐量/水质 + 地形（平坦广阔海滩）+ 天气（晴天多、蒸发旺、雨天少）</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">22. 洋流判读 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li>分布看纬度，<span class="key">东西岸性质相反</span></li>
+        <li>洋流与等温线：<span class="key">凸向即流向</span></li>
+        <li>题眼：影响气温、降水、盐度、渔场、定南北半球、定季节、顺水/逆水</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块六 ========== -->
+<section class="module" id="m6">
+  <div class="module-title"><span class="num">06</span>河流与水循环</div>
+
+  <div class="item open">
+    <div class="item-head">23. 河流水系特征 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">水系特征 = 性质（内/外流）+ 流向 + 流程长短 + 支流多少 + 流域面积 + 水系形状</div>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">24. 河流水文特征 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">水文特征 = 径流量 + 年际/季节变化 + 补给类型与汛期 + 流速 + 含沙量 + 结冰期 + 凌汛 + 水能 + 航运价值</div>
+      <div class="注意"><span class="tag p">推导链</span>经纬度→气候→气温/降水→结冰期/径流量；海陆轮廓/地形→流速/水能；植被→含沙量</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">25. 河流上中下游规律 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li><span class="key">上游</span>：起伏大、落差大、流速快、含沙量大、水能富、以侵蚀为主</li>
+        <li><span class="key">下游</span>：起伏小、流速慢、含沙量小、航运大、以沉积为主</li>
+      </ul>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag g">沉积地貌三位置</span></h4>
+        <div class="口诀">出山口→冲积扇｜中下游→河漫滩平原｜入海口→三角洲</div>
+      </div>
+      <div class="注意"><span class="tag p">三角洲成因</span> = 侵蚀 + 沉积 + 海水顶托</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">26. 河流开发与治理 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag b">开发</span></h4>
+        <div class="formula">水能 + 农业（林/牧/渔/种植）+ 工矿业 + 航运 + 旅游</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">治理</span></h4>
+        <div class="formula">上游 + 中游 + 下游（分段施策）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">27. 水循环"三个箭头" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag g">环节</span></h4>
+        <div class="口诀">降水↓、蒸发↑、径流→；海陆间循环四环节：蒸发+水汽输送+降水+径流</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">人类活动影响四角度</span></h4>
+        <ul>
+          <li>时间尺度：修水库、植树造林→改季节/年际分配</li>
+          <li>空间尺度：跨流域调水→改空间分布</li>
+          <li>生态角度：排干沼泽、超采地下水、破坏植被→负面</li>
+          <li>水资源角度：超循环周期→枯竭；污水→水质型缺水</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">水循环意义</span></h4>
+        <div class="formula">维持水量平衡 + 更新陆地淡水 + 物质迁移能量交换 + 影响气候生态 + 塑造地表形态</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块七 ========== -->
+<section class="module" id="m7">
+  <div class="module-title"><span class="num">07</span>地质地貌</div>
+
+  <div class="item">
+    <div class="item-head">28. 岩石圈循环两步法 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">①先记类别和特例 ②再看箭头找突破口</div>
+      <div class="注意"><span class="tag p">新老关系</span>覆盖者新、被覆盖者老；侵入者新、被侵入者老</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">29. 地貌成因分析 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li>排序题：<span class="key">外力排最后，具体看题眼</span></li>
+        <li>大地形→<span class="key">板块构造理论</span>；小地形→<span class="key">内外力共同作用</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">30. 地质构造应用 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">找油找背斜，找水找向斜；隧道过背斜，工程避断层</div>
+      <div class="注意"><span class="tag p">判读口诀</span>看形状、记新老、讲运用</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块八 ========== -->
+<section class="module" id="m8">
+  <div class="module-title"><span class="num">08</span>自然带与地域分异</div>
+
+  <div class="item">
+    <div class="item-head">31. 地理环境整体性 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">一基础（地貌/气候）、两功能（生产/平衡）、两表现（统一演化、牵一发而动全身）</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">答题四角度</span></h4>
+        <ul>
+          <li>要素与整体协调一致</li>
+          <li>一要素变→其他要素甚至整个环境变</li>
+          <li>区域间相互联系</li>
+          <li>人类活动→"牵一发而动全身"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">32. 自然带判断 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">以形定位、以温定带、以水定型</div>
+      <table>
+        <tr><th>气候</th><th>自然带</th></tr>
+        <tr><td>热带雨林</td><td>热带雨林带</td></tr>
+        <tr><td>热带草原</td><td>热带草原带</td></tr>
+        <tr><td>热带沙漠</td><td>热带荒漠带</td></tr>
+        <tr><td>地中海</td><td>亚热带常绿硬叶林带</td></tr>
+        <tr><td>亚热带季风</td><td>亚热带常绿阔叶林带</td></tr>
+        <tr><td>温带季风/海洋</td><td>温带落叶阔叶林带</td></tr>
+        <tr><td>温带大陆性</td><td>温带草原带/温带荒漠带</td></tr>
+        <tr><td>亚寒带针叶林</td><td>亚寒带针叶林带</td></tr>
+        <tr><td>苔原/冰原</td><td>苔原带/冰原带</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">33. 水平地域分异规律 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th></th><th>赤道→两极</th><th>沿海→内陆</th></tr>
+        <tr><td>更替方向</td><td>南北</td><td>东西</td></tr>
+        <tr><td>延伸方向</td><td>东西</td><td>南北</td></tr>
+        <tr><td>自然带变化</td><td>雨林→阔叶林→针叶林→苔原→冰原</td><td>森林→草原→荒漠</td></tr>
+        <tr><td>主导因素</td><td><span class="key">热量</span></td><td><span class="key">水分</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">34. 垂直带谱判读 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li><span class="key">南北半球</span>：南坡同类自然带高于北坡→北半球</li>
+        <li><span class="key">热量带</span>：山麓基带=当地水平自然带</li>
+        <li><span class="key">纬度高低</span>：带谱越多→纬度越低</li>
+        <li><span class="key">迎风坡</span>：降水多→自然带多、雪线低</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">35. 雪线影响因素 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">一看气温（正相关——气温高雪线高）；二看降水（反相关——降水多雪线低）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块九 ========== -->
+<section class="module" id="m9">
+  <div class="module-title"><span class="num">09</span>人口与城市</div>
+
+  <div class="item">
+    <div class="item-head">36. 人口增长模式"四看法" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">看经济发展模式 + 看数字 + 看形状（人口金字塔）+ 看生产力发展水平</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">37. 人口增长率与迁移 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">人口增长率 = 自然增长率 + 机械增长率</div>
+      <div class="注意"><span class="tag p">人数极值</span>由正转负时人口最多；由负转正时人口最少</div>
+      <div class="block" style="margin-top:8px">
+        <h4><span class="tag b">人口迁移影响</span></h4>
+        <ul>
+          <li><span class="key">迁入地</span>：利——廉价劳动力、促流通、促三产；弊——公共设施负担、管理难度、生态压力</li>
+          <li><span class="key">迁出地</span>：利——加强对外联系、缓解人地矛盾、开发土地资源；弊——人才外流、劳动力减少</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">38. 城市区位 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">城市区位 = 气候 + 地形 + 地质 + 水文 + 资源 + 经济 + 政治 + 宗教 + 科技 + 旅游</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag g">功能分区秒杀</span></h4>
+        <div class="口诀">看面积（住宅区最大）｜看有钱（商业区付租最高）｜看隔离带｜看"高大上"（高级住宅区）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">39. 城市化 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">三大标志</span></h4>
+        <div class="口诀">城市人口增加 + 城市人口比重上升（最主要指标）+ 城市用地规模扩大</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">城市化三表现</span></h4>
+        <ul>
+          <li>人口城市化：城市人口数量/比重上升</li>
+          <li>地域城市化：用地规模扩大</li>
+          <li>产业城市化：二、三产业比重上升，一产下降</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十 ========== -->
+<section class="module" id="m10">
+  <div class="module-title"><span class="num">10</span>农业</div>
+
+  <div class="item open">
+    <div class="item-head">40. 农业区位大模板 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">大区位 = 光热水土地 + 劳市交政科 + X（特殊因素）</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">自然条件</span></h4>
+        <ul>
+          <li>光照/热量/降水/雨热同期/昼夜温差</li>
+          <li>土壤（肥沃、土层深厚）</li>
+          <li>地形（排水好、适宜耕作）</li>
+          <li>灌溉水源（河流/地下水/冰雪融水/绿洲）</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">社会经济条件</span></h4>
+        <ul>
+          <li>劳动力（数量/价格/素质）</li>
+          <li>市场（需求量/远近）</li>
+          <li>交通（保鲜冷藏技术）</li>
+          <li>政策/科技/机械/历史经验/饮食习惯</li>
+          <li>地租/商品率</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">41. 农业小区位 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">小区位 = 地价 + 单产 + 需水量 + 交通 + 市场</div>
+      <div class="注意"><span class="tag g">优先考虑市场</span>；主观大题要结合播种期+生长期+收获期</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">42. 作物品质优/农产品畅销 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">品质优良（如东北水稻、新疆瓜果）</span></h4>
+        <ul>
+          <li>昼夜温差大→糖分积累多</li>
+          <li>低温→病虫害少→农药少</li>
+          <li>光热充足、光照时间长</li>
+          <li>雨热同期</li>
+          <li>土壤肥沃、土层深厚</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">农产品畅销</span></h4>
+        <ul>
+          <li>品质好、市场需求大</li>
+          <li>反季节销售（时间差）</li>
+          <li>生态绿色无污染</li>
+          <li>交通便利</li>
+          <li>易保存、便于长途运输</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">43. 农业地域类型判断"三看" <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">看生产对象 + 看生产目的 + 看生产规模</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">44. 农业可持续发展（分区域） <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th>区域</th><th>措施</th></tr>
+        <tr><td>平原区</td><td>增施有机肥；调整结构；多种经营；生态农业</td></tr>
+        <tr><td>林区</td><td>退耕还林；综合开发利用</td></tr>
+        <tr><td>丘陵山区</td><td>封山育林、保持水土；发展立体农业</td></tr>
+        <tr><td>牧区</td><td>退耕还草；合理载畜量；人工草场；轮牧</td></tr>
+        <tr><td>灌溉农业区</td><td>节水农业；合理灌溉防盐渍化；兴修水利</td></tr>
+        <tr><td>通用</td><td>少用化肥农药；发展生态农业</td></tr>
+      </table>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">主观题万能模板</span></h4>
+        <div class="口诀">调结构（农林牧副渔+二三产）→ 产业化（龙头企业/延长链/提附加值）→ 基建 → 推技术 → 改生态（高产/优质/高效/生态/安全）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十一 ========== -->
+<section class="module" id="m11">
+  <div class="module-title"><span class="num">11</span>工业与产业转移</div>
+
+  <div class="item open">
+    <div class="item-head">45. 工业区位模板 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">工业区位 = 原动水土地 + 劳市交政科 + X</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">自然条件</span></h4>
+        <ul><li>地形/水源/资源能源/环境优美（高新产业）</li></ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">社会经济条件</span></h4>
+        <ul><li>市场/交通/信息通达度/科技/劳动力/政策/地租/军事国防/工业惯性/产业协作/工业基础</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">46. 工业集聚与分散 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">集聚</span></h4>
+        <div class="formula">共用基础设施降成本 + 信息交流协作 + 规模效益（弊：加剧污染）</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">分散</span></h4>
+        <ul>
+          <li>充分利用各地区位优势（发达国：资金/技术/人才；发展中国家：廉价劳力/资源/低地租）</li>
+          <li>扩大影响力，实现全球战略</li>
+          <li>减少本地区污染（污染产业向外转移）</li>
+        </ul>
+      </div>
+      <div class="注意"><span class="tag g">传导原则</span>利益最大化、成本最小化</div>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">47. 产业转移 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">原因</span></h4>
+        <div class="formula">劳动力 + 地价 + 内部交易成本 + 其他（市场/政策/环境）</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">对迁入地</span></h4>
+        <ul>
+          <li>利：资源开发→经济发展→就业；促城市化/基建；促产业结构升级/三产</li>
+          <li>弊：环境污染/生态破坏；资源消耗增加；占用耕地</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">对迁出地</span></h4>
+        <ul>
+          <li>利：减少资源消耗、减轻污染；促产业升级；腾出空间发展高端产业</li>
+          <li>弊：短期经济衰退、失业增加</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十二 ========== -->
+<section class="module" id="m12">
+  <div class="module-title"><span class="num">12</span>交通与工程区位</div>
+
+  <div class="item">
+    <div class="item-head">48. 交通线修建的影响 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">有利</span></h4>
+        <ul>
+          <li>完善交通网、缩短时空距离、缓解运输压力</li>
+          <li>促经济发展、资源开发</li>
+          <li>加强对外交流联系</li>
+          <li>边疆地区：促民族团结、国家安全</li>
+          <li>带动区域发展（振兴/开发/崛起）</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag p">不利</span></h4>
+        <ul>
+          <li>破坏生态环境</li>
+          <li>不合理施工诱发地质灾害</li>
+          <li>破坏传统文化独立性</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">49. 修交通线的自然限制因素 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ul>
+        <li>地形崎岖、地势起伏大（云贵/青藏/山区）</li>
+        <li>地质差：断层、喀斯特广布</li>
+        <li>河网密集（南方）</li>
+        <li>生态脆弱（青藏/云贵/西北/黄土高原）</li>
+        <li>多风沙、荒漠化（西北）</li>
+        <li>多灾害：南方湿热/台风/海水侵蚀；北方极寒/寒潮/冻土；青藏地震/缺氧/冻土</li>
+      </ul>
+      <div class="注意"><span class="tag p">社会经济决定因素</span>经济落后→需求小；资金/技术/劳动力不足</div>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">50. 港口/机场/高铁站选址 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag b">港口（7要素）</span></h4>
+        <div class="口诀">港阔水深不冻不淤 + 背风浪小 + 地形平坦地质好 + 海岸线曲折多港湾 + 经济腹地广（决定因素）+ 基建完善 + 多式联运便利</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">机场（6要素）</span></h4>
+        <div class="口诀">平坦开阔排水好 + 地质好 + 晴天多雨雾少逆风 + 距市区远 + 交通便利 + 经济发达需求大</div>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">高铁站/长途站（4要素）</span></h4>
+        <div class="口诀">地形平坦地质好 + 市区郊区（地租低/面积大/避拥堵/促郊区）+ 交通便利 + 经济发达需求大</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">51. 核电站选址 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">远离城市安全 + 地形平坦地质好无断层 + 临海/河便于冷却水 + 交通便利近港口铁路</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">52. 修水利工程的影响 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">有利</span></h4>
+        <ul>
+          <li>调节径流、缓解下游水旱</li>
+          <li>减下游泥沙淤积、缓解地上河</li>
+          <li>发电/航运/养殖/旅游</li>
+          <li>调节气候、增降水减温差</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h4><span class="tag p">不利</span></h4>
+        <ul>
+          <li>诱发地质灾害（地震/滑坡/泥石流）</li>
+          <li>淹没上游耕地、移民</li>
+          <li>生物多样性减少</li>
+          <li>入海沙量减→三角洲退化、海岸侵蚀</li>
+          <li>地下水位上升→土地盐碱化</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十三 ========== -->
+<section class="module" id="m13">
+  <div class="module-title"><span class="num">13</span>资源开发与跨区域调配</div>
+
+  <div class="item">
+    <div class="item-head">53. 资源/能源短缺措施 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">
+      ①加大勘探增产量 ②跨区域调配（南水北调/西气东输/西电东送/北煤南运）<br>
+      ③优化能源结构、开发新能源 ④增加进口、建储备<br>
+      ⑤提技术、提利用率 ⑥提节约意识、减浪费
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">54. 资源跨区域调配分析思路 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">原因（分布差异+供求差异）→ 线路选择（沿线自然/人口/城市/经济）→ 意义（调入区+调出区的社会/经济/生态效益）</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">以西气东输为例</span></h4>
+        <table>
+          <tr><th>对东部（调入）</th><th>对西部（调出）</th></tr>
+          <tr>
+            <td>缓解能源短缺；带动相关产业；改善能源结构/大气环境；减轻铁路压力</td>
+            <td>资源优势→经济优势；推基建、增就业；促天然气综合利用；改善大气、提高生活质量</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">55. 资源开发条件评价 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">
+      <span class="key">基础好</span>：储量大、分布广、质量好、厚度大、埋藏浅<br>
+      <span class="key">拉动强</span>：距市场近、市场广阔<br>
+      <span class="key">有保证</span>：交通便利
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">56. 发达地区 vs 落后地区优势 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="block">
+        <h4><span class="tag r">发达地区</span></h4>
+        <p style="font-size:13px">资金足、劳力素质高、科技强、管理好、法制完善、市场广、交通便、物流发达、信息通达、环境优、政策支持、基建好、协作强</p>
+      </div>
+      <div class="block">
+        <h4><span class="tag r">落后地区</span></h4>
+        <p style="font-size:13px">劳力丰富廉价、能源资源富、市场广、地租低、政策支持、发展潜力大</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十四 ========== -->
+<section class="module" id="m14">
+  <div class="module-title"><span class="num">14</span>可持续发展与环境问题</div>
+
+  <div class="item">
+    <div class="item-head">57. 环境问题三层表现 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">环境问题 = 资源短缺 + 环境污染 + 生态破坏</div>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">成因 = 自然原因 + 人为原因（重点）</span></h4>
+      </div>
+      <div class="block">
+        <h4><span class="tag b">措施六手段</span></h4>
+        <div class="口诀">宣传教育 + 法规体系 + 行政 + 经济 + 技术 + 生物措施</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item open">
+    <div class="item-head">58. 生态环境问题判断 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th>区域特征</th><th>可能问题</th></tr>
+        <tr><td>远离海洋、降水稀少的内陆</td><td>荒漠化</td></tr>
+        <tr><td>丘陵/季风区高原/降水集中植被稀疏</td><td>水土流失</td></tr>
+        <tr><td>山地</td><td>森林破坏、水土流失、生物多样性减少</td></tr>
+        <tr><td>平原耕作区</td><td>水土流失、湿地减少</td></tr>
+        <tr><td>干旱半干旱草原区</td><td>土地荒漠化</td></tr>
+      </table>
+      <div class="block" style="margin-top:6px">
+        <h4><span class="tag b">成因分析</span></h4>
+        <ul>
+          <li>自然：地形/气候/土壤/植被/河流</li>
+          <li>人为：农业结构、能源消费、生产技术、政策</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">59. 区域可持续发展万能措施（10条） <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ol style="padding-left:18px;font-size:13.5px">
+        <li>合理开发利用资源，避免浪费</li>
+        <li>生态环保、环境治理</li>
+        <li>加大科技投入，提资源利用率、培育良种</li>
+        <li>完善交通网</li>
+        <li>加强培训，提劳动力素质</li>
+        <li>产业结构升级、促三产（绿色旅游/观光农业）</li>
+        <li>推动城市化</li>
+        <li>延伸产业链、提附加值、完善加工体系</li>
+        <li>开发清洁可再生新能源</li>
+        <li>提产品品质、扩营销、树品牌</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">60. 低碳经济/减排措施 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">
+      ①开发新能源、减化石燃料 ②提技术、减CO₂排放<br>
+      ③调产业结构、关停高耗能 ④植树造林<br>
+      ⑤能源综合利用、废弃物回收 ⑥政策管理、提节约意识
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十五 ========== -->
+<section class="module" id="m15">
+  <div class="module-title"><span class="num">15</span>旅游地理</div>
+
+  <div class="item">
+    <div class="item-head">61. 旅游资源开发评价 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">
+      价值（美学/科学/历史文化/经济）+ 地理位置交通 + 市场距离 + 基础设施接待能力<br>
+      + 环境承载量 + 知名度影响力 + 服务质量 + 政策支持
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">62. 旅游环境问题保护措施 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <ol style="padding-left:18px">
+        <li>健全环保法规、强化环境管理</li>
+        <li>加强全民教育、提高环保意识</li>
+        <li>搞好环境评价、制定环保规划</li>
+        <li>加强生态建设、防治环境污染</li>
+        <li>依靠科技进步、增强环保效果</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">63. 发展旅游业的影响 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">经济（增收外汇/带相关产业）+ 社会（增就业）+ 文化交流（多元文化）+ 环保意识（促文物保护）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 模块十六 ========== -->
+<section class="module" id="m16">
+  <div class="module-title"><span class="num">16</span>答题规范与3S技术</div>
+
+  <div class="item open">
+    <div class="item-head">64. 设问类型与答题深度 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th>设问词</th><th>答题要求</th></tr>
+        <tr><td>描述/说明/综述</td><td>只答现象/图中信息</td></tr>
+        <tr><td>分析/简析</td><td>既答现象，也答原因</td></tr>
+        <tr><td>对比/评价/影响</td><td>从有利+不利两方面</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">65. 各类特征描述必背要素数 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <table>
+        <tr><th>描述对象</th><th>必答要素</th></tr>
+        <tr><td>气候特征</td><td>气温+降水+季节变化+水热同期否（4点）</td></tr>
+        <tr><td>地形地势</td><td>高低+地形类型+地势起伏+变化（4点）</td></tr>
+        <tr><td>分布特征</td><td>方向/多少+最多最少+均匀否+疏密+沿什么分布（5点）</td></tr>
+        <tr><td>河流水文</td><td>流量+汛期+含沙量+结冰期+凌汛+落差水能航运（7点）</td></tr>
+        <tr><td>河流水系</td><td>流程+支流+流域+地形区+内外流+注入（6点）</td></tr>
+        <tr><td>等值线分布</td><td>方向+弯曲+疏密+闭合相交平行（4点）</td></tr>
+        <tr><td>地理位置</td><td>半球+纬度五带+海陆位置+相对位置（4点）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">66. "3S"技术判别三字诀 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="口诀">
+      <span class="key">点/面判GPS</span>：定位导航——对象是"点"→GPS<br>
+      <span class="key">想/看判RS/GIS</span>：需要计算思考分析→GIS；只收集信息"看"→RS
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">67. 物流中心/交通枢纽区位 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">交通便利 + 地理位置优越（区域中心/航线中点）+ 某资源产区商品率高 + 地形平坦仓储好</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-head">68. 发展海洋经济有利条件 <span class="toggle">▶</span></div>
+    <div class="item-body">
+      <div class="formula">位置临海 + 多良港 + 沿海大陆架地质好 + 气候条件好 + 海洋资源丰富（旅游/渔业/矿产/空间）</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="toolbar">
+  <button onclick="toggleAll(true)" title="全部展开">展开</button>
+  <button onclick="toggleAll(false)" title="全部折叠">折叠</button>
+</div>
+
+<script>
+document.querySelectorAll('.item-head').forEach(h=>{
+  h.addEventListener('click',()=>h.parentElement.classList.toggle('open'));
+});
+function toggleAll(open){
+  document.querySelectorAll('.item').forEach(it=>it.classList.toggle('open',open));
+}
+</script>
+</body>
+</html>
+<!-- （注：内容由AI生成） -->
